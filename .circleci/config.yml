@@ -57,3 +57,4 @@ workflows:
     jobs:
       - say-hello
       - try-hard
+      - gradle/test
