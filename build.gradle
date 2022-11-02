@@ -36,6 +36,15 @@ test {
 }
 
 
+
+
+jar{
+    manifest{
+        attributes 'Main-Class': 'main.java.ATMTest.Main'
+
+    }
+}
+
 //Define the main class for the application
 
 mainClassName = 'ATMTest.Main'
