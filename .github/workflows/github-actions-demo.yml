@@ -16,3 +16,17 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+      - name: setup gradle
+        uses: gradle/gradle-build-action@v2
+      - name: run build
+        run: ./gradlew build
+      - name: run test
+        run: ./gradlew test
+
+
